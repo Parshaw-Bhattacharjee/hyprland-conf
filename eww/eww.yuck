@@ -1,0 +1,21 @@
+(defwidget donut [value label color]
+  (box :class "donut"
+    (circular-progress
+      :value value
+      :thickness 10
+      :class color)
+    (label :text label)))
+
+(defwidget stats []
+  (box :class "stats"
+    (donut :value cpu :label "CPU" :color "cpu")
+    (donut :value ram :label "RAM" :color "ram")
+    (donut :value gpu :label "GPU" :color "gpu")))
+
+(defwindow stats
+  :monitor 0
+  :geometry (geometry :x "80%" :y "36px" :width "280px" :height "90px")
+  :anchor "top right"
+  :stacking "fg"
+  :exclusive false
+  (stats))

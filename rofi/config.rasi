@@ -1,0 +1,14 @@
+configuration {
+    modi: "drun,run,window,calc,emoji";
+    show-icons: true;
+    icon-theme: "Papirus";
+    drun-display-format: "{icon}  {name}";
+    window-format: "{w} · {c}";
+    disable-history: false;
+    sidebar-mode: false;
+    hover-select: false;
+    kb-row-up: "Up,Control+k";
+    kb-row-down: "Down,Control+j";
+    kb-accept-entry: "Return";
+    kb-cancel: "Escape,Control+c";
+}

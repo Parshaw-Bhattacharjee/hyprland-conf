@@ -1,0 +1,24 @@
+.stats {
+  background: rgba(20, 20, 28, 0.9);
+  border-radius: 14px;
+  padding: 10px;
+  display: flex;
+  gap: 12px;
+}
+
+.donut {
+  width: 60px;
+  height: 60px;
+}
+
+.circular-progress.cpu {
+  color: #f9e2af;
+}
+
+.circular-progress.ram {
+  color: #a6e3a1;
+}
+
+.circular-progress.gpu {
+  color: #fab387;
+}
