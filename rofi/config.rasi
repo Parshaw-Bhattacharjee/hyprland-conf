@@ -7,8 +7,8 @@ configuration {
     disable-history: false;
     sidebar-mode: false;
     hover-select: false;
-    kb-row-up: "Up,Control+k";
-    kb-row-down: "Down,Control+j";
-    kb-accept-entry: "Return";
-    kb-cancel: "Escape,Control+c";
+    kb-row-up: "Up";
+    kb-row-down: "Down";
+    kb-accept-entry: "Return,KP_Enter";
+    kb-cancel: "Escape";
 }

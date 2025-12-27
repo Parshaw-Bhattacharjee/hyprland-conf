@@ -59,9 +59,11 @@ tooltip label {
 }
 
 /* Hide workspace module when only one workspace */
+/*
 #workspaces button:only-child {
     display: none;
 }
+*/
 
 /* ───────────── Clock ───────────── */
 

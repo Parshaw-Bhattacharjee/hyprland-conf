@@ -5,7 +5,8 @@
   "spacing": 8,
 
   "modules-left": [
-    "hyprland/workspaces"
+    "hyprland/workspaces",
+    "hyprland/window"
   ],
 
   "modules-center": [
@@ -20,8 +21,7 @@
     "network",
     "pulseaudio",
     "battery",
-    "custom/power",
-    "hyprland/window"
+    "custom/power"
   ],
 
   /* ───────────── LEFT ───────────── */
@@ -32,6 +32,13 @@
     "all-outputs": true,
     "persistent-workspaces": {
       "*": 1
+    },
+
+    /* Peek at desktop (shows focused window title) */
+    "hyprland/window": {
+      "format": "{}",
+      "max-length": 30,
+      "tooltip": true
     }
   },
 
@@ -105,12 +112,5 @@
     "format": "⏻",
     "tooltip": "Power Menu",
     "on-click": "~/.config/waybar/scripts/power_menu.sh"
-  },
-
-  /* Peek at desktop (shows focused window title) */
-  "hyprland/window": {
-    "format": "{}",
-    "max-length": 30,
-    "tooltip": true
   }
 }

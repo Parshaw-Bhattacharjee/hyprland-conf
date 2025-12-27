@@ -12,7 +12,7 @@ window {
     anchor: center;
     border-radius: 18px;
     background-color: @bg;
-    border: 1px solid @accent;
+    border: @accent;
     padding: 20px;
 }
 
