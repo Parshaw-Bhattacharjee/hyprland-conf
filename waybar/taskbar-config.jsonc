@@ -18,7 +18,8 @@
     "memory",
     "custom/gpu",
     "tray",
-    "network",
+    "nm-applet",
+    "blueman-applet",
     "pulseaudio",
     "battery",
     "custom/power"
@@ -78,14 +79,6 @@
   "tray": {
     "icon-size": 18,
     "spacing": 6
-  },
-
-  "network": {
-    "interval": 2,
-    "format-wifi": " {signalStrength}%",
-    "format-ethernet": "󰈀 Wired",
-    "format-disconnected": "⚠ Disconnected",
-    "tooltip-format": "IP: {ipaddr}\nDown: {bandwidthDownBits}\nUp: {bandwidthUpBits}"
   },
 
   "pulseaudio": {

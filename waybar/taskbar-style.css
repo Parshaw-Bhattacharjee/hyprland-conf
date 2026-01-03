@@ -111,12 +111,6 @@ tooltip label {
     background: rgba(243, 139, 168, 0.25);
 }
 
-/* ───────────── Network ───────────── */
-
-#network {
-    color: #74c7ec;
-}
-
 /* ───────────── Audio ───────────── */
 
 #pulseaudio {
