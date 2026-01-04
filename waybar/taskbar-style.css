@@ -58,13 +58,6 @@ tooltip label {
     background: rgba(137, 180, 250, 0.25);
 }
 
-/* Hide workspace module when only one workspace */
-/*
-#workspaces button:only-child {
-    display: none;
-}
-*/
-
 /* ───────────── Clock ───────────── */
 
 #clock {
@@ -85,30 +78,11 @@ tooltip label {
     color: #a6e3a1;
 }
 
-#custom-gpu {
-    color: #fab387;
-}
-
 /* Hover highlight for stats */
 #cpu:hover,
-#memory:hover,
-#custom-gpu:hover {
+#memory:hover {
     background: rgba(255, 255, 255, 0.08);
     border-radius: 8px;
-}
-
-/* ───────────── Tray ───────────── */
-
-#tray {
-    padding: 0 8px;
-}
-
-#tray > .passive {
-    opacity: 0.5;
-}
-
-#tray > .needs-attention {
-    background: rgba(243, 139, 168, 0.25);
 }
 
 /* ───────────── Audio ───────────── */
