@@ -10,7 +10,6 @@
   ],
 
   "modules-center": [
-    "custom/copyq",
     "clock",
     "custom/swaync"
   ],
@@ -18,12 +17,10 @@
   "modules-right": [
     "cpu",
     "memory",
-    "nm-applet",
-    "blueman-applet",
+    "tray",
     "pulseaudio",
-    "brightness",
-    "group/battery",
-    "custom/power-menu"
+    "backlight",
+    "group/battery"
   ],
 
   /* ───────────── LEFT ───────────── */
@@ -33,7 +30,7 @@
     "on-click": "activate",
     "all-outputs": true,
     "persistent-workspaces": {
-      "*": ""
+      "*": 1
     }
   },
 
@@ -49,17 +46,10 @@
 
   /* ───────────── CENTER ───────────── */
 
-  "custom/copyq": {
-    "format": "📋",
-    "tooltip": "CopyQ Clipboard Manager",
-    "on-click": "copyq show",
-    "on-click-right": "copyq toggle"
-  },
-
   "clock": {
     "interval": 60,
-    "format": "{:%d-%b-%Y | %H:%M}",
-    "tooltip-format": "<big>{:%A}</big>\n<tt>{:%d %B %Y}</tt>\n{:%H:%M:%S}"
+    "format": "{:%d-%b-%Y | %H:%M} 🕐",  // Clock icon
+    "tooltip-format": "<tt>{calendar}</tt>"
   },
 
   "custom/swaync": {
@@ -83,6 +73,13 @@
     "tooltip-format": "RAM: {used:0.1f}G / {total:0.1f}G\nSwap: {swapUsed:0.1f}G / {swapTotal:0.1f}G"
   },
 
+  "tray": {
+    "spacing": 3,
+    "padding": 3,
+    "icon-size": 20,
+    "show-passive-items": true
+  },
+
   "pulseaudio": {
     "format": " {volume}%",
     "format-muted": "󰝟 Muted",
@@ -90,7 +87,7 @@
     "tooltip": true
   },
 
-  "brightness": {
+  "backlight": {
   "format": " {percent}%",
   "format-icons": ["󰃞", "󰃟", "󰃠"],
   "tooltip": true,
@@ -109,8 +106,7 @@
       "transition-left-to-right": false
     },
     "modules": [
-      "battery",
-      "custom/power-profile"
+      "battery"
     ]
   },
 
@@ -127,18 +123,5 @@
     "tooltip": true,
     "on-click": "~/.config/waybar/scripts/power_profile_menu.sh",
     "on-click-right": "~/.config/waybar/scripts/battery_info.sh"
-  },
-
-  "custom/power-profile": {
-    "format": "⚡",
-    "tooltip": "Power Profile",
-    "on-click": "~/.config/waybar/scripts/power_profile_menu.sh"
-  },
-
-  "custom/power-menu": {
-    "format": "⏻",
-    "tooltip": "Power Menu (Lock | Sleep | Suspend | Reboot | Shutdown)",
-    "on-click": "~/.config/waybar/scripts/power_menu_dropdown.sh",
-    "on-click-right": "hyprlock"
   }
 }

@@ -1,7 +1,7 @@
 /* ───────────── Global ───────────── */
 
 * {
-    font-family: "JetBrainsMono Nerd Font", "FiraCode Nerd Font", monospace;
+    font-family: "Roboto Mono Nerd Font", "Roboto Nerd Font", Roboto, Helvetica, Arial, sans-serif;
     font-size: 13px;
     min-height: 0;
 }
@@ -107,27 +107,6 @@ tooltip label {
 
 #battery.critical {
     color: #f38ba8;
-}
-
-/* ───────────── Power Menu ───────────── */
-
-#custom-power {
-    color: #f38ba8;
-    padding: 4px 10px;
-    border-radius: 50%;
-    transition: background 0.2s ease;
-}
-
-#custom-power:hover {
-    background: rgba(243, 139, 168, 0.25);
-}
-
-/* ───────────── Window Title / Peek Desktop ───────────── */
-
-#window {
-    color: #bac2de;
-    padding-left: 10px;
-    opacity: 0.85;
 }
 
 /* ───────────── Animations ───────────── */
