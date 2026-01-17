@@ -20,7 +20,8 @@
     "tray",
     "pulseaudio",
     "backlight",
-    "group/battery"
+    "battery",
+    "power-profiles-daemon"
   ],
 
   /* ───────────── LEFT ───────────── */
@@ -85,7 +86,8 @@
   "pulseaudio": {
     "format": "  {volume}%",
     "format-muted": "󰝟  Muted",
-    "on-click": "pavucontrol",
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+    "on-click-right": "hyprpwcenter",
     "tooltip": true
   },
 
@@ -100,27 +102,15 @@
   "scroll-step": 5
   },
 
-  "group/battery": {
-    "orientation": "horizontal",
-    "drawer": {
-      "transition-duration": 300,
-      "children-class": "not-primary",
-      "transition-left-to-right": false
-    },
-    "modules": [
-      "battery"
-    ]
-  },
-
   "battery": {
     "states": {
-      "warning": 50,
-      "critical": 15
+      "warning": 30,
+      "critical": 10
     },
     "events": {
-      "on-charging-100": "notify-send -u normal 'Battery Full!!!' 'Remove your Charger!'",
-      "on-discharging-warning": "notify-send -u low 'Battery Low!!!' 'Plug-In your Chanrger!'",
-		  "on-discharging-critical": "notify-send -u critical 'Battery Critical!!!' 'Suspending Soon...'"
+      "on-charging-100": "notify-send -t 1000 -u normal 'Battery Full!!!' 'Remove your Charger!'",
+      "on-discharging-warning": "notify-send -t 3000 -u low 'Battery Low!!!' 'Plug-In your Chanrger!'",
+		  "on-discharging-critical": "notify-send -t 5000 -u critical 'Battery Critical!!!' 'Suspending Soon...'"
     },
     "format": "{icon} {capacity}%",
     "format-charging": "󰂄 {capacity}%",
@@ -128,5 +118,18 @@
     "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂"],
     "tooltip-format": "Battery: {capacity}%\nTime: {time}\nPower: {power}W\nHealth: {health}%",
     "tooltip": true
+  },
+
+  "power-profiles-daemon": {
+    "format": "{icon}",
+    "tooltip-format": "Power profile: {profile}nDriver: {driver}",
+    "tooltip": true,
+    "format-icons": {
+      "default": "",
+      "performance": "",
+      "balanced": "",
+      "power-saver": ""
+    }
   }
+
 }
