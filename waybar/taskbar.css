@@ -87,11 +87,11 @@ tooltip label {
 
 /* ───────────── Audio ───────────── */
 
-#pulseaudio {
+#wireplumber {
     color: #cba6f7;
 }
 
-#pulseaudio.muted {
+#wireplumber.muted {
     color: #6c7086;
 }
 
