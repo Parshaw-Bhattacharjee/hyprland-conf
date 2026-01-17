@@ -1,9 +1,0 @@
-[Unit]
-Description=Battery level alert notification
-After=graphical-session-started.target
-
-[Service]
-Type=oneshot
-ExecStart=/home/Parshaw/.config/systemd/user/scripts/battery-alert.sh
-Environment=DISPLAY=:1
-Environment="DBUS_SESSION_BUS_ADDRESS=unix:path=%t/bus"
